@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lead Insights Dashboard</title>
+    <link href="./assest/css2.css" rel="stylesheet">
+    <link rel="stylesheet" href="./assest/all.min.css">
+    <script src="./assest/Sortable.min.js"></script>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <!-- Add to t.html before </body> -->
+<div class="taskbar" id="taskbar"></div>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-icon">
+                    <i class="fas fa-chart-network"></i>
+                </div>
+                <div class="logo-text">
+                <h1 class="lead-field" id="lead-name"><strong>Name:</strong> Loading... </h1>
+                 </div>
+                 <h3 class="lead-field" id="lead-budget"><strong>Budget:</strong> Loading...</h3>
+        <p class="lead-field" id="lead-status"><strong>Status:</strong> Loading...</p>
+        <p class="lead-field" id="lead-phone"><strong>Phone:</strong> Loading...</p>
+
+               
+            </div>
+            <button class="theme-toggle" id="themeToggle">
+                <div class="toggle-circle">
+                    <i class="fas fa-sun"></i>
+                </div>
+            </button>
+        </header>
+
+        <div class="dashboard-grid" id="dashboardGrid">
+            <!-- Summary Quadrant -->
+            <div class="quadrant summary" data-type="summary">
+                <div class="quadrant-header">
+                    <div class="quadrant-title">
+                        <div class="quadrant-icon">
+                            <i class="fas fa-file-alt"></i>
+                        </div>
+                        <h3>AI-Generated Summary</h3>
+                    </div>
+                    <button class="minimize-btn">
+                        <i class="fas fa-minus">x</i>
+                    </button>
+                </div>
+                <div class="quadrant-content">
+                    <div class="content-placeholder">
+                        <i class="fas fa-spinner loading-spinner"></i>
+                        <p class="placeholder-text">Loading lead insights summary...</p>
+                    </div>
+                    <button class="expand-btn">
+                        <i class="fas fa-expand"></i> Expand
+                    </button>
+                </div>
+            </div>
+
+            <!-- Guidance Quadrant -->
+            <div class="quadrant guidance" data-type="guidance">
+                <div class="quadrant-header">
+                    <div class="quadrant-title">
+                        <div class="quadrant-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>AI-Generated Guidance</h3>
+                    </div>
+                    <button class="minimize-btn">
+                        <i class="fas fa-minus">x</i>
+                    </button>
+                </div>
+                <div class="quadrant-content">
+                    <div class="content-placeholder">
+                        <i class="fas fa-spinner loading-spinner"></i>
+                        <p class="placeholder-text">Loading strategic guidance...</p>
+                    </div>
+                    <button class="expand-btn">
+                        <i class="fas fa-expand"></i> Expand
+                    </button>
+                </div>
+            </div>
+
+            <!-- Method Quadrant -->
+            <div class="quadrant method" data-type="method">
+                <div class="quadrant-header">
+                    <div class="quadrant-title">
+                        <div class="quadrant-icon">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <h3>Deal Locking Strategies</h3>
+                    </div>
+                    <button class="minimize-btn">
+                        <i class="fas fa-minus">x</i>
+                    </button>
+                </div>
+                <div class="quadrant-content">
+                    <div class="content-placeholder">
+                        <i class="fas fa-spinner loading-spinner"></i>
+                        <p class="placeholder-text">Loading deal closing strategies...</p>
+                    </div>
+                    <button class="expand-btn">
+                        <i class="fas fa-expand"></i> Expand
+                    </button>
+                </div>
+            </div>
+
+            <!-- Reason Quadrant -->
+            <div class="quadrant reason" data-type="reason">
+                <div class="quadrant-header">
+                    <div class="quadrant-title">
+                        <div class="quadrant-icon">
+                            <i class="fas fa-question-circle"></i>
+                        </div>
+                        <h3>Reason Analysis</h3>
+                    </div>
+                    <button class="minimize-btn">
+                        <i class="fas fa-minus">x</i>
+                    </button>
+                </div>
+                <div class="quadrant-content">
+                    <div class="content-placeholder">
+                        <i class="fas fa-spinner loading-spinner"></i>
+                        <p class="placeholder-text">Loading reason analysis...</p>
+                    </div>
+                    <button class="expand-btn">
+                        <i class="fas fa-expand"></i> Expand
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Expanded Modal -->
+        <div class="expanded-modal" id="expandedModal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title">
+                        <i class="fas fa-file-alt"></i>
+                        <h3 id="modalTitle">AI-Generated Summary</h3>
+                    </div>
+                    <button class="modal-close" id="modalClose">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-data" id="modalData">
+                        <i class="fas fa-spinner loading-spinner"></i> Loading detailed data...
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="status-bar" id="statusBar">
+        <i class="fas fa-sync-alt"></i>
+        <span>Fetching data from server...</span>
+    </div>
+    <script src="./run.js"></script>
+    <!-- <script src="./test.js"> -->
+      
+    </script>
+</body>
+</html>
